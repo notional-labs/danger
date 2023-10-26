@@ -1,37 +1,36 @@
-module github.com/CosmWasm/wasmd
+module github.com/notional-labs/danger
 
 go 1.21
 
 require (
-	github.com/CosmWasm/wasmvm v1.4.1
-	github.com/cosmos/cosmos-proto v1.0.0-beta.3
+	github.com/CosmWasm/wasmvm v1.4.1 // indirect
+	github.com/cosmos/cosmos-proto v1.0.0-beta.3 // indirect
 	github.com/cosmos/cosmos-sdk v0.50.0-rc.1.0.20231019221833-0c9930dfe36f
 	github.com/cosmos/gogogateway v1.2.0 // indirect
 	github.com/cosmos/gogoproto v1.4.11
-	github.com/cosmos/iavl v1.0.0-rc.1
+	github.com/cosmos/iavl v1.0.0-rc.1 // indirect
 	github.com/cosmos/ics23/go v0.10.0 // indirect
 	github.com/dvsekhvalnov/jose2go v1.5.0 // indirect
-	github.com/golang/protobuf v1.5.3
-	github.com/google/gofuzz v1.2.0
+	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
-	github.com/grpc-ecosystem/grpc-gateway v1.16.0
-	github.com/pkg/errors v0.9.1
+	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_golang v1.17.0
-	github.com/snikch/goodman v0.0.0-20171125024755-10e37e294daa
 	github.com/spf13/cast v1.5.1
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.8.4
-	github.com/syndtr/goleveldb v1.0.1-0.20220721030215-126854af5e6d
+	github.com/syndtr/goleveldb v1.0.1-0.20220721030215-126854af5e6d // indirect
 	google.golang.org/genproto v0.0.0-20231012201019-e917dd12ba7a // indirect
-	google.golang.org/grpc v1.59.0
-	gopkg.in/yaml.v2 v2.4.0
+	google.golang.org/grpc v1.59.0 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
 require (
 	cosmossdk.io/api v0.7.2
 	cosmossdk.io/client/v2 v2.0.0-20231009141709-5e209c3c0fce
-	cosmossdk.io/collections v0.4.0
+	cosmossdk.io/collections v0.4.0 // indirect
 	cosmossdk.io/core v0.11.0
 	cosmossdk.io/depinject v1.0.0-alpha.4 // indirect
 	cosmossdk.io/log v1.2.1
@@ -48,13 +47,16 @@ require (
 	github.com/cosmos/cosmos-db v1.0.0
 	github.com/cosmos/ibc-go/modules/capability v1.0.0-rc6
 	github.com/cosmos/ibc-go/v8 v8.0.0-beta.1
-	github.com/distribution/reference v0.5.0
-	github.com/rs/zerolog v1.31.0
+	github.com/distribution/reference v0.5.0 // indirect
+	github.com/rs/zerolog v1.31.0 // indirect
 	github.com/spf13/viper v1.17.0
-	google.golang.org/genproto/googleapis/api v0.0.0-20231002182017-d307bd883b97
+	google.golang.org/genproto/googleapis/api v0.0.0-20231002182017-d307bd883b97 // indirect
 )
 
-require cosmossdk.io/errors v1.0.0
+require (
+	cosmossdk.io/errors v1.0.0 // indirect
+	github.com/CosmWasm/wasmd v0.50.0-rc.0.0.20231026085017-5adfe129715d
+)
 
 require (
 	cloud.google.com/go v0.110.8 // indirect
@@ -104,8 +106,6 @@ require (
 	github.com/go-kit/kit v0.12.0 // indirect
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
-	github.com/gobwas/httphead v0.1.0 // indirect
-	github.com/gobwas/pool v0.2.1 // indirect
 	github.com/godbus/dbus v0.0.0-20190726142602-4481cbc300e2 // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
@@ -160,7 +160,6 @@ require (
 	github.com/mtibben/percent v0.2.1 // indirect
 	github.com/oasisprotocol/curve25519-voi v0.0.0-20230110094441-db37f07504ce // indirect
 	github.com/oklog/run v1.1.0 // indirect
-	github.com/onsi/ginkgo v1.16.4 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.1.0 // indirect
 	github.com/petermattis/goid v0.0.0-20230808133559-b036b712a89b // indirect
@@ -219,5 +218,6 @@ replace (
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )
 
+replace github.com/cosmos/ibc-go/v8 => github.com/notional-labs/ibc-go/v8 v8.0.0-alpha.1.0.20231026154521-3165ace201b3
 
-replace github.com/cosmos/ibc-go/v8 => github.com/notional-labs/ibc-go/v8 3165ace
+replace github.com/CosmWasm/wasmd => github.com/faddat/wasmd v0.40.0-rc.1.0.20231020173042-4681b17e183b
