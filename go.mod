@@ -31,7 +31,7 @@ require (
 	cosmossdk.io/api v0.7.2
 	cosmossdk.io/client/v2 v2.0.0-20231009141709-5e209c3c0fce
 	cosmossdk.io/collections v0.4.0 // indirect
-	cosmossdk.io/core v0.11.0
+	cosmossdk.io/core v0.12.0
 	cosmossdk.io/depinject v1.0.0-alpha.4 // indirect
 	cosmossdk.io/log v1.2.1
 	cosmossdk.io/math v1.1.3-rc.1
