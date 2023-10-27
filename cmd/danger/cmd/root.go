@@ -54,8 +54,8 @@ func NewRootCmd() *cobra.Command {
 		WithViper("") // In danger, we don't use any prefix for env variables.
 
 	rootCmd := &cobra.Command{
-		Use:   "dangerd",
-		Short: "Danger",
+		Use:   "danger",
+		Short: "Danger is a mainnet for quality control in cosmos",
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			// set the default command outputs
 			cmd.SetOut(cmd.OutOrStdout())

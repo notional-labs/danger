@@ -139,7 +139,7 @@ const appName = "DangerApp"
 
 // We pull these out so we can set them with LDFLAGS in the Makefile
 var (
-	NodeDir      = ".dangerd"
+	NodeDir      = ".danger"
 	Bech32Prefix = "danger"
 )
 
