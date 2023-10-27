@@ -135,20 +135,20 @@ import (
 	ibctm "github.com/cosmos/ibc-go/v8/modules/light-clients/07-tendermint"
 )
 
-const appName = "WasmApp"
+const appName = "DangerApp"
 
 // We pull these out so we can set them with LDFLAGS in the Makefile
 var (
-	NodeDir      = ".wasmd"
-	Bech32Prefix = "wasm"
+	NodeDir      = ".dangerd"
+	Bech32Prefix = "danger"
 )
 
 // These constants are derived from the above variables.
 // These are the ones we will want to use in the code, based on
 // any overrides above
 var (
-	// DefaultNodeHome default home directories for wasmd
-	DefaultNodeHome = os.ExpandEnv("$HOME/") + NodeDir
+	// DefaultNodeHome default home directories for the application daemon
+	DefaultNodeHome string
 
 	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address
 	Bech32PrefixAccAddr = Bech32Prefix
@@ -1172,4 +1172,13 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 	paramsKeeper.Subspace(icacontrollertypes.SubModuleName)
 	paramsKeeper.Subspace(wasmtypes.ModuleName)
 	return paramsKeeper
+}
+
+func init() {
+	userHomeDir, err := os.UserHomeDir()
+	if err != nil {
+		panic(err)
+	}
+
+	DefaultNodeHome = filepath.Join(userHomeDir, ".danger")
 }
