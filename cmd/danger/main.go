@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/CosmWasm/wasmd/app"
+	"github.com/notional-labs/danger/app"
 	"github.com/notional-labs/danger/cmd/danger/cmd"
 
 	"cosmossdk.io/log"

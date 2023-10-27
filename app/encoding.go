@@ -3,9 +3,9 @@ package app
 import (
 	"testing"
 
-	"github.com/CosmWasm/wasmd/app/params"
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	dbm "github.com/cosmos/cosmos-db"
+	"github.com/notional-labs/danger/app/params"
 
 	"cosmossdk.io/log"
 

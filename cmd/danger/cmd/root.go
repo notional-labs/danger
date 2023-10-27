@@ -3,11 +3,11 @@ package cmd
 import (
 	"os"
 
-	"github.com/CosmWasm/wasmd/app"
-	"github.com/CosmWasm/wasmd/app/params"
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	dbm "github.com/cosmos/cosmos-db"
+	"github.com/notional-labs/danger/app"
+	"github.com/notional-labs/danger/app/params"
 	"github.com/spf13/cobra"
 
 	"cosmossdk.io/log"

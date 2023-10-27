@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/CosmWasm/wasmd/app"
+	"github.com/notional-labs/danger/app"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 

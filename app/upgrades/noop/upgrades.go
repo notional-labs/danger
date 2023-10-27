@@ -3,7 +3,7 @@ package noop
 import (
 	"context"
 
-	"github.com/CosmWasm/wasmd/app/upgrades"
+	"github.com/notional-labs/danger/app/upgrades"
 
 	storetypes "cosmossdk.io/store/types"
 	upgradetypes "cosmossdk.io/x/upgrade/types"

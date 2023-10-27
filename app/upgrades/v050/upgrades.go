@@ -3,7 +3,7 @@ package v050
 import (
 	"context"
 
-	"github.com/CosmWasm/wasmd/app/upgrades"
+	"github.com/notional-labs/danger/app/upgrades"
 
 	storetypes "cosmossdk.io/store/types"
 	circuittypes "cosmossdk.io/x/circuit/types"

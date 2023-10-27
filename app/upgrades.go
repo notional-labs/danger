@@ -3,9 +3,9 @@ package app
 import (
 	"fmt"
 
-	"github.com/CosmWasm/wasmd/app/upgrades"
-	"github.com/CosmWasm/wasmd/app/upgrades/noop"
-	v050 "github.com/CosmWasm/wasmd/app/upgrades/v050"
+	"github.com/notional-labs/danger/app/upgrades"
+	"github.com/notional-labs/danger/app/upgrades/noop"
+	v050 "github.com/notional-labs/danger/app/upgrades/v050"
 
 	upgradetypes "cosmossdk.io/x/upgrade/types"
 
