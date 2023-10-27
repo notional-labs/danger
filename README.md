@@ -11,7 +11,7 @@ We've allowed default settings in cosmos to get insane, but we don't know which 
 
 ## Performance Research
 
-It is currently not possible to do high quality research on chain performance due to the fact that many testnets, like the cosmos hub replicated security testnet, do not resemble reality.  Danger aims 
+It is currently not possible to do high quality research on chain performance due to the fact that many testnets, like the cosmos hub replicated security testnet, do not resemble reality.  Danger solves this by being a mainnet that people are encouraged to attack. 
 
 
 ## Genesis procedure
