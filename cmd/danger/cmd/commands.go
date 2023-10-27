@@ -8,7 +8,6 @@ import (
 	"github.com/CosmWasm/wasmd/x/wasm"
 	wasmcli "github.com/CosmWasm/wasmd/x/wasm/client/cli"
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
-	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	dbm "github.com/cosmos/cosmos-db"
 	"github.com/notional-labs/danger/app"
 	"github.com/prometheus/client_golang/prometheus"
@@ -56,10 +55,19 @@ func initCometBFTConfig() *cmtcfg.Config {
 func initAppConfig() (string, interface{}) {
 	// The following code snippet is just for reference.
 
-	type CustomAppConfig struct {
-		serverconfig.Config
+	// WASMConfig defines configuration for the wasm module.
+	type WASMConfig struct {
+		// This is the maximum sdk gas (wasm and storage) that we allow for any x/wasm "smart" queries
+		QueryGasLimit uint64 `mapstructure:"query_gas_limit"`
 
-		Wasm wasmtypes.WasmConfig `mapstructure:"wasm"`
+		// Address defines the gRPC-web server to listen on
+		LruSize uint64 `mapstructure:"lru_size"`
+	}
+
+	type CustomAppConfig struct {
+		serverconfig.Config `mapstructure:",squash"`
+
+		WASM WASMConfig `mapstructure:"wasm"`
 	}
 
 	// Optionally allow the chain developer to overwrite the SDK's default
@@ -82,11 +90,19 @@ func initAppConfig() (string, interface{}) {
 
 	customAppConfig := CustomAppConfig{
 		Config: *srvCfg,
-		Wasm:   wasmtypes.DefaultWasmConfig(),
+		WASM: WASMConfig{
+			LruSize:       1,
+			QueryGasLimit: 300000,
+		},
 	}
 
-	customAppTemplate := serverconfig.DefaultConfigTemplate +
-		wasmtypes.DefaultConfigTemplate()
+	customAppTemplate := serverconfig.DefaultConfigTemplate + `
+[wasm]
+# This is the maximum sdk gas (wasm and storage) that we allow for any x/wasm "smart" queries
+query_gas_limit = {{ .WASM.QueryGasLimit }}
+# This is the number of wasm vm instances we keep cached in memory for speed-up
+# Warning: this is currently unstable and may lead to crashes, best to keep for 0 unless testing locally
+lru_size = {{ .WASM.LruSize }}`
 
 	return customAppTemplate, customAppConfig
 }
@@ -94,6 +110,8 @@ func initAppConfig() (string, interface{}) {
 func initRootCmd(
 	rootCmd *cobra.Command,
 	txConfig client.TxConfig,
+	//	interfaceRegistry codectypes.InterfaceRegistry,
+	//	appCodec codec.Codec,
 	basicManager module.BasicManager,
 ) {
 	cfg := sdk.GetConfig()
@@ -215,12 +233,12 @@ func appExport(
 	appOpts servertypes.AppOptions,
 	modulesToExport []string,
 ) (servertypes.ExportedApp, error) {
-	var wasmApp *app.DangerApp
+	var dangerApp *app.DangerApp
 	// this check is necessary as we use the flag in x/upgrade.
 	// we can exit more gracefully by checking the flag here.
 	homePath, ok := appOpts.Get(flags.FlagHome).(string)
 	if !ok || homePath == "" {
-		return servertypes.ExportedApp{}, errors.New("application home is not set")
+		return servertypes.ExportedApp{}, errors.New("application home not set")
 	}
 
 	viperAppOpts, ok := appOpts.(*viper.Viper)
@@ -233,28 +251,24 @@ func appExport(
 	appOpts = viperAppOpts
 
 	var emptyWasmOpts []wasmkeeper.Option
-	wasmApp = app.NewDangerApp(
-		logger,
-		db,
-		traceStore,
-		height == -1,
-		appOpts,
-		emptyWasmOpts,
-	)
 
 	if height != -1 {
-		if err := wasmApp.LoadHeight(height); err != nil {
+		dangerApp = app.NewDangerApp(logger, db, traceStore, false, appOpts, emptyWasmOpts)
+
+		if err := dangerApp.LoadHeight(height); err != nil {
 			return servertypes.ExportedApp{}, err
 		}
+	} else {
+		dangerApp = app.NewDangerApp(logger, db, traceStore, true, appOpts, emptyWasmOpts)
 	}
 
-	return wasmApp.ExportAppStateAndValidators(forZeroHeight, jailAllowedAddrs, modulesToExport)
+	return dangerApp.ExportAppStateAndValidators(forZeroHeight, jailAllowedAddrs, modulesToExport)
 }
 
 var tempDir = func() string {
 	dir, err := os.MkdirTemp("", "danger")
 	if err != nil {
-		panic("failed to create temp dir: " + err.Error())
+		dir = app.DefaultNodeHome
 	}
 	defer os.RemoveAll(dir)
 
