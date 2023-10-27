@@ -6,8 +6,6 @@ import (
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	dbm "github.com/cosmos/cosmos-db"
-	"github.com/notional-labs/danger/app"
-	"github.com/notional-labs/danger/app/params"
 	"github.com/spf13/cobra"
 
 	"cosmossdk.io/log"
@@ -22,6 +20,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/tx"
 	txmodule "github.com/cosmos/cosmos-sdk/x/auth/tx/config"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+
+	"github.com/notional-labs/danger/app"
+	"github.com/notional-labs/danger/app/params"
 )
 
 // NewRootCmd creates a new root commaxnd for wasmd. It is called once in the

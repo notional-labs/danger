@@ -9,7 +9,6 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/notional-labs/danger/app"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
@@ -38,6 +37,8 @@ import (
 
 	cmtconfig "github.com/cometbft/cometbft/config"
 	cmttime "github.com/cometbft/cometbft/types/time"
+
+	"github.com/notional-labs/danger/app"
 )
 
 var (

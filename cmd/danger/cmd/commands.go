@@ -9,7 +9,6 @@ import (
 	wasmcli "github.com/CosmWasm/wasmd/x/wasm/client/cli"
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	dbm "github.com/cosmos/cosmos-db"
-	"github.com/notional-labs/danger/app"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/spf13/cast"
 	"github.com/spf13/cobra"
@@ -36,6 +35,8 @@ import (
 	genutilcli "github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
 
 	cmtcfg "github.com/cometbft/cometbft/config"
+
+	"github.com/notional-labs/danger/app"
 )
 
 // initCometBFTConfig helps to override default CometBFT Config values.

@@ -5,11 +5,12 @@ import (
 
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	dbm "github.com/cosmos/cosmos-db"
-	"github.com/notional-labs/danger/app/params"
 
 	"cosmossdk.io/log"
 
 	simtestutil "github.com/cosmos/cosmos-sdk/testutil/sims"
+
+	"github.com/notional-labs/danger/app/params"
 )
 
 // MakeEncodingConfig creates a new EncodingConfig with all modules registered. For testing only

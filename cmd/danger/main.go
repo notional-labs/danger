@@ -3,12 +3,12 @@ package main
 import (
 	"os"
 
-	"github.com/notional-labs/danger/app"
-	"github.com/notional-labs/danger/cmd/danger/cmd"
-
 	"cosmossdk.io/log"
 
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
+
+	"github.com/notional-labs/danger/app"
+	"github.com/notional-labs/danger/cmd/danger/cmd"
 )
 
 func main() {
