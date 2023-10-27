@@ -20,7 +20,7 @@ require (
 	github.com/spf13/cast v1.5.1
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/syndtr/goleveldb v1.0.1-0.20220721030215-126854af5e6d // indirect
 	google.golang.org/genproto v0.0.0-20231012201019-e917dd12ba7a // indirect
 	google.golang.org/grpc v1.59.0 // indirect
@@ -218,6 +218,6 @@ replace (
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )
 
-replace github.com/cosmos/ibc-go/v8 => github.com/notional-labs/ibc-go/v8 v8.0.0-alpha.1.0.20231026154521-3165ace201b3
+replace github.com/cosmos/ibc-go/v8 => github.com/notional-labs/ibc-go/v8 v8.0.0-alpha.1.0.20231026155905-fa9b0ad233d7
 
 replace github.com/CosmWasm/wasmd => github.com/faddat/wasmd v0.40.0-rc.1.0.20231020173042-4681b17e183b
