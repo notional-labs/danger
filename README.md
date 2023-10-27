@@ -26,6 +26,10 @@ It is currently not possible to do high quality research on chain performance du
 
 Likely to be unlimited, but this will be decided by governance. 
 
+## Economics info
+
+* [Tweet](https://x.com/gadikian/status/1717795175060439318?s=20)
+
 
 ## Credits
 
