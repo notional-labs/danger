@@ -4,15 +4,13 @@ It is dangerous, and so is $danger.
 
 this is a live fire mainnet, whose purpose it is to be attacked by anyone who wants to, for research purposes.  
 
-
 ## Sane default research
 
-We've allowed default settings in cosmos to get insane, but we don't know which and how.  Danger will launch entirely with default settings, like a 100 block signed block window.  Validators are responsible for changing this. 
+We've allowed default settings in cosmos to get insane, but we don't know which and how.  Danger will launch entirely with default settings, like a 100 block signed block window.  Validators are responsible for changing this.
 
 ## Performance Research
 
-It is currently not possible to do high quality research on chain performance due to the fact that many testnets, like the cosmos hub replicated security testnet, do not resemble reality.  Danger solves this by being a mainnet that people are encouraged to attack. 
-
+It is currently not possible to do high quality research on chain performance due to the fact that many testnets, like the cosmos hub replicated security testnet, do not resemble reality.  Danger solves this by being a mainnet that people are encouraged to attack.
 
 ## Genesis procedure
 
@@ -24,12 +22,11 @@ It is currently not possible to do high quality research on chain performance du
 
 ## Number of validators
 
-Likely to be unlimited, but this will be decided by governance. 
+Likely to be unlimited, but this will be decided by governance.
 
 ## Economics info
 
 * [Tweet](https://x.com/gadikian/status/1717795175060439318?s=20)
-
 
 ## Credits
 
