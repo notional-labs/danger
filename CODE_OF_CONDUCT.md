@@ -4,3 +4,4 @@
 * Accept that $danger isn't a financial product and can disappear at any time
 * Test code on danger
 * be as adversarial as you want
+* you can endanger $danger, do not endanger the cosmos or other networks
