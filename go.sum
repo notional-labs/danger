@@ -215,8 +215,8 @@ cosmossdk.io/x/feegrant v0.0.0-20231009114728-5259373edec8 h1:e3JUrisu36fIf+Ezpp
 cosmossdk.io/x/feegrant v0.0.0-20231009114728-5259373edec8/go.mod h1:nnIKdJKz1Os+sOlJHrjgMOh1WAlle0aV7Y+0x434OyI=
 cosmossdk.io/x/nft v0.0.0-20231006095526-33390754f9fe h1:xDWsbJp/9Tdwh2w8/KT7E0sxb52ASTn1M+UO4pq6kko=
 cosmossdk.io/x/nft v0.0.0-20231006095526-33390754f9fe/go.mod h1:QQROAXjZWeJzH6dNHUNCPhs7zHrYjknH8gYynf0IvXs=
-cosmossdk.io/x/tx v0.11.0 h1:Ak2LIC06bXqPbpMIEorkQbwVddRvRys1sL3Cjm+KPfs=
-cosmossdk.io/x/tx v0.11.0/go.mod h1:tzuC7JlfGivYuIO32JbvvY3Ft9s6FK1+r0/nGHiHwtM=
+cosmossdk.io/x/tx v0.12.0 h1:Ry2btjQdrfrje9qZ3iZeZSmDArjgxUJMMcLMrX4wj5U=
+cosmossdk.io/x/tx v0.12.0/go.mod h1:qTth2coAGkwCwOCjqQ8EAQg+9udXNRzcnSbMgGKGEI0=
 cosmossdk.io/x/upgrade v0.0.0-20230915171831-2196edacb99d h1:LH8NPa2+yoMFdCTxCFyQUX5zVDip4YDgtg7e0EecDqo=
 cosmossdk.io/x/upgrade v0.0.0-20230915171831-2196edacb99d/go.mod h1:+5jCm6Lk/CrQhQvtJFy/tmuLfhQKNMn/U0vwrRz/dxQ=
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
