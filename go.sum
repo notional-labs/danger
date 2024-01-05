@@ -213,8 +213,8 @@ cosmossdk.io/x/evidence v0.0.0-20230925151519-64e0e8980834 h1:h4ooSV3X5BxEfl3EUb
 cosmossdk.io/x/evidence v0.0.0-20230925151519-64e0e8980834/go.mod h1:yUgv71a56ZEJu7c8BXWCliDrQ7Ag+FCZ//rYKw9S93U=
 cosmossdk.io/x/feegrant v0.0.0-20231009114728-5259373edec8 h1:e3JUrisu36fIf+EzppkSeryOocs7oUue4e1IepdhMMI=
 cosmossdk.io/x/feegrant v0.0.0-20231009114728-5259373edec8/go.mod h1:nnIKdJKz1Os+sOlJHrjgMOh1WAlle0aV7Y+0x434OyI=
-cosmossdk.io/x/nft v0.0.0-20231006095526-33390754f9fe h1:xDWsbJp/9Tdwh2w8/KT7E0sxb52ASTn1M+UO4pq6kko=
-cosmossdk.io/x/nft v0.0.0-20231006095526-33390754f9fe/go.mod h1:QQROAXjZWeJzH6dNHUNCPhs7zHrYjknH8gYynf0IvXs=
+cosmossdk.io/x/nft v0.1.0 h1:VhcsFiEK33ODN27kxKLa0r/CeFd8laBfbDBwYqCyYCM=
+cosmossdk.io/x/nft v0.1.0/go.mod h1:ec4j4QAO4mJZ+45jeYRnW7awLHby1JZANqe1hNZ4S3g=
 cosmossdk.io/x/tx v0.12.0 h1:Ry2btjQdrfrje9qZ3iZeZSmDArjgxUJMMcLMrX4wj5U=
 cosmossdk.io/x/tx v0.12.0/go.mod h1:qTth2coAGkwCwOCjqQ8EAQg+9udXNRzcnSbMgGKGEI0=
 cosmossdk.io/x/upgrade v0.0.0-20230915171831-2196edacb99d h1:LH8NPa2+yoMFdCTxCFyQUX5zVDip4YDgtg7e0EecDqo=
