@@ -40,7 +40,7 @@ require (
 	cosmossdk.io/x/circuit v0.0.0-20231006095526-33390754f9fe
 	cosmossdk.io/x/evidence v0.0.0-20230925151519-64e0e8980834
 	cosmossdk.io/x/feegrant v0.0.0-20231009114728-5259373edec8
-	cosmossdk.io/x/nft v0.0.0-20231006095526-33390754f9fe
+	cosmossdk.io/x/nft v0.1.0
 	cosmossdk.io/x/tx v0.12.0
 	cosmossdk.io/x/upgrade v0.0.0-20230915171831-2196edacb99d
 	github.com/cometbft/cometbft v0.38.2
