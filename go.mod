@@ -35,7 +35,7 @@ require (
 	cosmossdk.io/depinject v1.0.0-alpha.4 // indirect
 	cosmossdk.io/log v1.2.1
 	cosmossdk.io/math v1.2.0
-	cosmossdk.io/store v1.0.1
+	cosmossdk.io/store v1.0.2
 	cosmossdk.io/tools/confix v0.0.0-20230925151519-64e0e8980834
 	cosmossdk.io/x/circuit v0.0.0-20231006095526-33390754f9fe
 	cosmossdk.io/x/evidence v0.0.0-20230925151519-64e0e8980834
